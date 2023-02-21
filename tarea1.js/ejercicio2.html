@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 2</title>
+</head>
+<style>
+    body{
+        background-color: rgb(160, 241, 241);
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h1>EJERCICIO 2:</h1>
+   <p></p><strong> Crear una función que determine la nota final de un alumno,
+     la cual depende de lo siguiente:
+ Examen =20%
+ tareas = 40%
+ asistencia = 10%
+ investigación = 30%
+Al final deberá mostrar los datos del alumno, nombre, carnet y nota final.</strong></p>
+
+<br>
+<p>nombre: <input type="text" id="nombre"> </p>
+<p># de carnet <input type="text" id="numero"></p>
+<p>Examen :<input type="text" id="n1"> </p>
+<p>Tareas :<input type="text" id="n2"> </p>
+<p>Asistencia: <input type="text" id="n3"></p>
+<p>Investigación: <input type="text" id="n4"> </p>
+<p><input type="button" value="calcular" onclick="calcularpromedio()"></p>
+<p id="promedio"></p>
+
+
+
+</body>
+
+<script>
+    function calcularpromedio (){
+        var num = document.getElementById("numero").value;
+        var nom = document.getElementById("nombre").value;
+        var v1 = document.getElementById("n1").value;
+        var v2 = document.getElementById("n2").value;
+        var v3 = document.getElementById("n3").value;
+        var v4 = document.getElementById("n4").value;
+        var pro = (parseFloat(v1)+parseFloat(v2)+parseFloat(v3)+parseFloat(v4))/4;
+        document.getElementById("promedio").innerHTML = pro;
+
+        let nota_final = ("el alumno: <br>" + (nom)+"<br> con numero de carnet: <br>"+(num)+ "<br> posee una nota final de: <br>" + pro)
+
+        document.write(nota_final);
+
+        alert((5 <=  pro) `esta reprobado`);
+        alert ((6 <=  pro)`esta aprobado`)
+    }
+
+
+
+
+
+</script>
+
+
+
+
+</html>

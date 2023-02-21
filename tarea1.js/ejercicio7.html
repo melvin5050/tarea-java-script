@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body{
+    background-color: aquamarine;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+</style>
+<body>
+
+    <h1>ejercicio:7</h1>
+    <p> <strong> Realizar programa para una web, en el cual el usuario introduce 2 notas y su valor
+        ponderado (como cuando un examen vale un 30% y otro examen el 70%). Pulsando el
+        botón “Calcula”, la web muestra como resultado la nota media ponderada.
+      </strong></p>
+    
+        <h1>Calculadora de nota media ponderada</h1>
+    
+        <form>
+          <label for="nota1">Nota 1:</label>
+          <input type="text" id="nota1" name="nota1"><br><br>
+          
+          <label for="peso1">Peso de la nota 1 (en %):</label>
+          <input type="text" id="peso1" name="peso1"><br><br>
+          
+          <label for="nota2">Nota 2:</label>
+          <input type="text" id="nota2" name="nota2"><br><br>
+          
+          <label for="peso2">Peso de la nota 2 (en %):</label>
+          <input type="text" id="peso2" name="peso2"><br><br>
+          
+          <input type="button" value="Calcula" onclick="calcularNotaMediaPonderada()">
+        
+       
+    </form>
+        
+        <p id="resultado"></p>
+</body>
+
+<script>
+      function calcularNotaMediaPonderada() {
+        var nota1 = parseFloat(document.getElementById("nota1").value);
+        var peso1 = parseFloat(document.getElementById("peso1").value);
+        var nota2 = parseFloat(document.getElementById("nota2").value);
+        var peso2 = parseFloat(document.getElementById("peso2").value);
+        
+        var notaMediaPonderada = (nota1 * peso1 / 100) + (nota2 * peso2 / 100);
+        
+        var resultado = document.getElementById("resultado");
+        resultado.innerHTML = "La nota media ponderada es: " + notaMediaPonderada;
+      }
+</script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+	body{
+	  background-color: aquamarine;
+	  text-align: center;
+	  font-family: Arial, Helvetica, sans-serif;
+	}
+  </style>
+<body>
+    <h1>Ejercicio:10</h1>
+    <p><strong> Se cuenta con la siguiente información:
+         Las edades de 5 estudiantes del turno mañana.
+         Las edades de 6 estudiantes del turno tarde.
+         Las edades de 11 estudiantes del turno noche.
+        Nota: Las edades de cada estudiante se deberán ingresar por la web.
+        Lo que queremos devolver:
+         Obtener el promedio de las edades de cada turno (tres promedios).
+         Imprimir dichos promedios (promedio de cada turno).
+         Mostrar por pantalla un mensaje que indique cuál de los tres turnos tiene un
+        promedio de edades mayor</strong></p>
+
+
+    
+</body>
+
+<script>
+    let edadesManana = [];
+let edadesTarde = [];
+let edadesNoche = [];
+
+// Pedir al usuario que ingrese las edades de los estudiantes de cada turno
+for (let i = 0; i < 5; i++) {
+  let edad = prompt("Ingrese la edad del estudiante del turno mañana:");
+  edadesManana.push(parseInt(edad));
+}
+
+for (let i = 0; i < 6; i++) {
+  let edad = prompt("Ingrese la edad del estudiante del turno tarde:");
+  edadesTarde.push(parseInt(edad));
+}
+
+for (let i = 0; i < 11; i++) {
+  let edad = prompt("Ingrese la edad del estudiante del turno noche:");
+  edadesNoche.push(parseInt(edad));
+}
+
+// Calcular los promedios de edades para cada turno
+let promedioManana = edadesManana.reduce((a, b) => a + b, 0) / edadesManana.length;
+let promedioTarde = edadesTarde.reduce((a, b) => a + b, 0) / edadesTarde.length;
+let promedioNoche = edadesNoche.reduce((a, b) => a + b, 0) / edadesNoche.length;
+
+// Determinar cuál de los tres turnos tiene un promedio de edades mayor
+let turnoMayor = "";
+if (promedioManana > promedioTarde && promedioManana > promedioNoche) {
+  turnoMayor = "Mañana";
+} else if (promedioTarde > promedioManana && promedioTarde > promedioNoche) {
+  turnoMayor = "Tarde";
+} else {
+  turnoMayor = "Noche";
+}
+
+// Imprimir los promedios de cada turno y el turno con el promedio mayor
+console.log("Promedio de edades del turno mañana: " + promedioManana);
+console.log("Promedio de edades del turno tarde: " + promedioTarde);
+console.log("Promedio de edades del turno noche: " + promedioNoche);
+console.log("El turno con el promedio de edades mayor es: " + turnoMayor);
+</script>
+</html>

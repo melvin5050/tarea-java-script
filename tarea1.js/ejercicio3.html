@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio</title>
+</head>
+<style>
+    body{
+        background-color: rgb(150, 243, 243);
+    }
+    
+</style>
+<body>
+  <h1>EJERCICIO 3:</h1>
+<p>CATEGORIA AUMENTO
+A 15%
+B 30%
+C 10%
+D 20%
+Calcular el aumento de trabajador tomando en cuenta la tabla de categorías de aumento.
+Para este ejercicio deberá de asignar las siguientes variables: Nombre, Salario, categoría y
+aumento. Deberá demostrar en html los datos del empleado y el aumento salarial.</p> 
+
+<form name="formulario1">
+    <table style="text-align: left; margin-left: auto; margin-right: auto;">
+        <tbody>
+            <tr>
+                <td>
+                    <label for="categoria">Ingresa el valor de categoria:</label>
+                </td>
+                <td>
+                    <input name="categoria" required="required" step="0.000001" type="number" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="sueldo">Ingresa el valor de sueldo:</label>
+                </td>
+                <td>
+                    <input name="sueldo" required="required" step="0.000001" type="number" />
+                </td>
+            </tr>
+            <tr tex-align="center">
+                <td colspan="2" rowspan="1">
+                    <input value="Procesar" type="button" onclick="algoritmo();" />
+                    <input type="reset" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="aumento">Valor de aumento:</label>
+                </td>
+                <td>
+                    <input name="aumento" step="0.000001" type="number" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="nuevo_sueldo">Valor de nuevo sueldo:</label>
+                </td>
+                <td>
+                    <input name="nuevo_sueldo" step="0.000001" type="number" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+
+
+</body>
+
+
+
+<script>
+    function algoritmo()
+{
+    let aumento, categoria, nuevo_sueldo, sueldo;
+    categoria = parseFloat (document.formulario1.categoria.value);
+    sueldo = parseFloat (document.formulario1.sueldo.value);
+    aumento=0;
+    if(categoria==1)
+        aumento=sueldo*0.15;
+    if(categoria==2)
+        aumento=sueldo*0.30;
+    if(categoria==3)
+        aumento=sueldo*0.10;
+    if(categoria==4)
+        aumento=sueldo*0.20;
+    nuevo_sueldo=sueldo+aumento;
+    document.formulario1.aumento.value = aumento;
+    document.formulario1.nuevo_sueldo.value = nuevo_sueldo;
+}
+ 
+</script>
+</html>

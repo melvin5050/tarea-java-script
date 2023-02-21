@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body{
+    background-color: aquamarine;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+</style>
+
+<body>
+    <h1>EJERCICIO 5:</h1>
+    <p> <strong> Realizar una función para una tienda de coches en donde se deberá calcular: Si el coche a <br>
+        la venta es un FORD FIESTA, aplicar un 5% de descuento en la compra. Si el coche a la <br> 
+        venta es un FORD FOCUS, el descuento será del 10% y si es un FORD ESCAPE el descuento <br> 
+        será del 20%. Mostrar en html el coche seleccionado y el descuento que se aplicara en base <br>
+        a lo que selecciono el usuario.</strong></p> <br><br><br>
+
+        <button onclick="calcularDescuento('FORD FIESTA')">Seleccionar FORD FIESTA</button>
+        <button onclick="calcularDescuento('FORD FOCUS')">Seleccionar FORD FOCUS</button>
+        <button onclick="calcularDescuento('FORD ESCAPE')">Seleccionar FORD ESCAPE</button>
+        
+        <div id="mensaje"></div>
+        <div id="descuento"></div>
+
+</body>
+<script>
+
+    
+function calcularDescuento(modeloCoche) {
+  var descuento = 0;
+  var mensaje = "";
+
+  
+
+switch(modeloCoche) {
+    case "FORD FIESTA":
+      descuento = 
+      descuento = 
+
+      descuento =5;
+      mensaje = 
+      mensaje =
+"Ha seleccionado un FORD FIESTA. Se aplicará un descuento del 5% en su compra.";
+      
+     
+break;
+    case "FORD FOCUS":
+      descuento = 
+      descuento = 
+
+      descuento =
+
+     
+10;
+      mensaje = 
+      mensaje =
+"Ha seleccionado un FORD FOCUS. Se aplicará un descuento del 10% en su compra.";
+      
+     
+break;
+    case "FORD ESCAPE":
+      descuento = 
+      descuento = 
+
+      descuento =
+
+     
+20;
+      mensaje = 
+      mensaje =
+
+     
+"Ha seleccionado un FORD ESCAPE. Se aplicará un descuento del 20% en su compra.";
+      
+     
+break;
+    default:
+      mensaje = 
+      mensaje =
+"El modelo de coche seleccionado no tiene descuento aplicable.";
+  }
+
+  
+ 
+document.getElementById("mensaje").innerHTML = mensaje;
+  
+ 
+document.getElementById("descuento").innerHTML = "Descuento: " + descuento + "%";
+}
+ 
+
+</script>
+
+
+
+</html>
